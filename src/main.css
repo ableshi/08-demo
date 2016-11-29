@@ -1,0 +1,52 @@
+button:focus,button:active,button:visited{
+  outline: none;
+}
+.my-warp{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.my-main{
+  flex-grow: 1;
+  overflow-y: scroll;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.my-footer{
+  flex-shrink: 0;
+  height: 80px;
+  background-color: brown;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.my-footer a{
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  text-align: center;
+  border-right:  1px solid rgba(5, 0, 0, 0.5);;
+  flex-grow: 1
+}
+.my-footer a:last-child{
+  border: none;
+}
+.nav-header{
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;;
+  align-items: center;
+  height: 80px;
+  background-color: yellow;
+  padding: 0 5px;
+}
+.nav-header h3 {
+  margin: 0;
+  color: green;
+  font-weight: bold;
+}
+.nav-header button{
+  color: green;
+  background-color: rgba(0, 0, 0, 0.4);
+  border:none;
+  border-radius: 10px;
+}

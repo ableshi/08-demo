@@ -4,9 +4,12 @@ import NavFooter from './component/NavFooter.js'
 class App extends React.Component {
   render () {
     return(
-      <div>
+      <div className='my-warp'>
         <NavHeader />
-        {this.props.children}
+        <div className='my-main'>
+          {this.props.children}
+        </div>
+
         <NavFooter />
       </div>
     )
