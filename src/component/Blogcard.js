@@ -1,7 +1,15 @@
 import React, { PropTypes } from 'react'
 import RaisedButton from 'material-ui/RaisedButton';
-
+import axios from 'axios'
 class Blogcard extends React.Component {
+  constructor(){
+    super()
+    this.state={
+      data:[],
+      wait:true
+    }
+  }
+  componentDidMount(){}
   render () {
     return(
       <div className='blog-card'>
@@ -9,7 +17,8 @@ class Blogcard extends React.Component {
         <div className='blog-content clearfix'  >
           <h3>{this.props.title}</h3>
           <p>{this.props.desc}</p>
-          <RaisedButton label="查看更多" secondary={true}  />
+          <RaisedButton label="查看更多" secondary={true}
+            href={`#/item/${this.props.url}`}/>
         </div>
       </div>
     )
