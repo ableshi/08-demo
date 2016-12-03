@@ -1,7 +1,7 @@
 button:focus,button:active,button:visited{
   outline: none;
 }
-.my-warp{
+.my-warp{                            /* app*/
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -9,7 +9,7 @@ button:focus,button:active,button:visited{
 .my-main{
   flex-grow: 1;
   overflow-y: scroll;
-  background-color: rgba(255, 0, 0, 0.5);
+  display: flex;
 }
 .my-footer{
   flex-shrink: 0;
@@ -49,4 +49,74 @@ button:focus,button:active,button:visited{
   background-color: rgba(0, 0, 0, 0.4);
   border:none;
   border-radius: 10px;
+}
+.home-warp{
+  flex-grow: 1;
+  background-image: url(../img/bejing.jpg);
+  background-size: cover;
+  background-position: left;
+  display: flex;
+}
+.home-cover{
+  background-color: rgba(0, 0, 0, 0.5);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+
+}
+.home-item{
+  text-align: center;
+  margin: 0 auto;
+  color:#fff;
+}
+.home-item h2{
+  text-shadow: rgba(225, 0, 0, 0.5) 5px 5px 10px;
+}
+.about-warp{
+  flex-grow: 1;
+  padding: 30px;
+}
+.git-card{
+  width: 100%;
+  height: 90%;
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 6px,rgba(0, 0, 0, 0.5) 3px 3px 6px;
+  padding: 10px;
+  text-align: center;
+  color: green;
+}
+.about-form{
+  margin: 0 auto;
+  display: inline;;
+  width: 50%;
+  max-width: 560px;
+}
+.blog-card{
+  padding: 0 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.blog-warp{
+  flex-grow: 1;
+  margin-top: 20px;
+}
+.blog-index{
+  background-color: blue;
+  font-size: 28px;
+  text-align: center;
+  color:#fff;
+  height: 60px;
+  padding-top: 10px
+}
+.blog-index span{
+  border-radius: 50%;
+  border:1px solid #fff;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.blog-content{
+  box-shadow: rgba(255, 0, 0, 0.5) 1px 1px 5px;
+  padding: 5px 8px;
 }
