@@ -5,15 +5,18 @@ import Home from './Home';
 import Blog from './Blog';
 import Work from './Work';
 import About from './About';
+import Item from './item'
 class Routers extends React.Component {
   render () {
     return(
         <Router history={hashHistory}>
           <Router path='/' component={App}>
             <IndexRoute component={Home} />
-            <Router path='Blog' component={Blog} />
-            <Router path='Work' component={Work} />
-            <Router path='About' component={About} />
+            <Router path='blog' component={Blog} />
+            <Router path='work' component={Work} />
+            <Router path='about' component={About} />
+            <Router path='item/:title' component={Item} />
+
           </Router>
         </Router>
     )

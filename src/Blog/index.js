@@ -1,16 +1,24 @@
 import React, { PropTypes } from 'react'
+import axios from 'axios'
 import Blogcard from '../component/Blogcard.js'
-let data =[
-  {index:1,title:'hello1',desc:'111'},
-  {index:2,title:'hello2',desc:'222'},
-  {index:3,title:'hello3',desc:'333'}
-]
 class Blog extends React.Component {
+  constructor(){
+    super()
+    this.state={
+      data:[],
+      wait:true
+    }
+  }
+  componentDidMount(){
+    axios.get('https://raw.githubusercontent.com/ableshi/08-demo/master/data/blogcard.json?')
+    .then( res => this.setState({data:res.data,wait:false}))
+  }
   render () {
-    let cards=data.map( (item,i) => <Blogcard {...item} key={i} />)
     return(
       <div className='blog-warp'>
-        {cards}
+        {this.state.wait ? '数据正在加载请稍后' :
+          this.state.data.map( (item,i) => <Blogcard {...item} key={i} />)
+        }
       </div>
     )
   }
