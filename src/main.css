@@ -1,7 +1,7 @@
 button:focus,button:active,button:visited{
   outline: none;
 }
-.my-warp{                            /* app*/
+.my-warp{
   display: flex;
   flex-direction: column;
   height: 100vh;
